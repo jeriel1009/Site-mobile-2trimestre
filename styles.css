@@ -1,6 +1,8 @@
 :root {
     --cor-de-fundo: #80d4f5;
     --branco: #fff;
+    --laranja:  #EB9b00;
+    --azul-degrade: linear-gradient(97.54deg, #002f52 35.49%, #326589 165.37%);
 }
 
 body {
@@ -16,6 +18,7 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .container {
@@ -35,3 +38,32 @@ h1 {
     background-position: center;
     display: inline-block;
 }
+
+.lista-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 60vw;
+}
+  
+.lista-menu__titulo{
+    color: var(--laranja);
+}
+
+.lista-menu__link {
+    background: var(--azul-degrade);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase;
+}
+
+.lista-menu__titulo, .lista-menu__item{
+    padding: 1em;
+    background-color: var(--branco);
+  }
+
+ .container-botao:checked ~ .lista-menu {
+    display: block;
+ }
+
